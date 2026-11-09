@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bpy6bel3axr6b"]
+
+[ext_resource type="Texture2D" uid="uid://rewlg64elju8" path="res://Flaippy_poor_lil_bird.png" id="1_3wup2"]
+[ext_resource type="Script" uid="uid://cukaqw8xlwsvl" path="res://poor_little_bird_run_by_a_puny_human.gd" id="1_lxiop"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10dbr"]
+size = Vector2(16, 10)
+
+[node name="poor little bird run by a puny human" type="CharacterBody2D" unique_id=661195340]
+script = ExtResource("1_lxiop")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1054296698]
+position = Vector2(0, 1.1920929e-07)
+scale = Vector2(0.8571429, 0.85714287)
+texture = ExtResource("1_3wup2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=110418875]
+shape = SubResource("RectangleShape2D_10dbr")
