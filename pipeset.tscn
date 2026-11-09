@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ba78a5gx317ju"]
+
+[ext_resource type="Script" uid="uid://8s0xye2q3rjw" path="res://pipeset.gd" id="1_iy4aa"]
+[ext_resource type="PackedScene" uid="uid://bbbgl2faichr5" path="res://metal_pipe.tscn" id="1_liobq"]
+[ext_resource type="PackedScene" uid="uid://dkoj5gg8i3vrv" path="res://metal_pipe_flip.tscn" id="2_iy4aa"]
+
+[node name="pipeset" type="Node2D" unique_id=2016357049 groups=["pipeset"]]
+script = ExtResource("1_iy4aa")
+
+[node name="Metal Pipe" parent="." unique_id=764355219 instance=ExtResource("1_liobq")]
+position = Vector2(0, 35)
+
+[node name="Metal PipeFlip" parent="." unique_id=263539818 instance=ExtResource("2_iy4aa")]
+position = Vector2(0, -35)

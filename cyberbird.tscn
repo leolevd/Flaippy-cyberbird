@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://buhfre50u7ae2"]
+
+[ext_resource type="Script" uid="uid://btuyc0md5m4n3" path="res://cyberbird.gd" id="1_330v4"]
+[ext_resource type="Texture2D" uid="uid://87c04fvvjefb" path="res://Flaippy Cyberbird.png" id="1_q45kc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsws6"]
+size = Vector2(16, 14)
+
+[node name="cyberbird" type="CharacterBody2D" unique_id=1074109059 groups=["birds"]]
+z_index = 4096
+scale = Vector2(0.5200002, 0.5200002)
+collision_mask = 8
+script = ExtResource("1_330v4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1700247274]
+texture = ExtResource("1_q45kc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1420176095]
+shape = SubResource("RectangleShape2D_tsws6")

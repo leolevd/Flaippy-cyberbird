@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dqfi1a14jq1w5"]
+
+[ext_resource type="Script" uid="uid://bljwb4jke7gw2" path="res://safebox.gd" id="1_u1wqy"]
+
+[node name="safebox" type="Area2D" unique_id=587847445]
+script = ExtResource("1_u1wqy")
