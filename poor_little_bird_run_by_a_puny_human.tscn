@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10dbr"]
 size = Vector2(16, 10)
 
-[node name="poor little bird run by a puny human" type="CharacterBody2D" unique_id=661195340]
+[node name="poor little bird run by a puny human" type="CharacterBody2D" unique_id=661195340 groups=["birds"]]
+scale = Vector2(0.60000026, 0.60000026)
+collision_mask = 8
 script = ExtResource("1_lxiop")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1054296698]

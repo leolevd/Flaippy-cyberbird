@@ -6,7 +6,7 @@ var weights_ho = []
 var bias_h = []
 var bias_o = 0.0
 var brain_cells = 8
-var inputs = 4
+var inputs = 3
 func _init() -> void:
 	for i in range(brain_cells):
 		var row = []

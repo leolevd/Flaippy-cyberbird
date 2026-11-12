@@ -38,6 +38,7 @@ animations = [{
 size = Vector2(28, 51)
 
 [node name="Metal Pipe" type="Area2D" unique_id=764355219]
+collision_mask = 9
 script = ExtResource("1_d8yp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=200623845]

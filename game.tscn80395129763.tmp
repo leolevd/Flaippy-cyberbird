@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ddy5nr1pt3tsl"]
+
+[ext_resource type="Texture2D" uid="uid://bds3wsp2xgs2y" path="res://Flaippy Background.png" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://ibj0g4shkocb" path="res://Flaippy BackgroundTop.png" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://uvs85th3m5vx" path="res://pipeemitter.gd" id="4_fc0e3"]
+[ext_resource type="Script" uid="uid://r5vhpc1i6iq2" path="res://evolution.gd" id="5_7jktm"]
+[ext_resource type="Script" uid="uid://dhkbre8365ocy" path="res://Birdspawner.gd" id="6_ryrav"]
+[ext_resource type="PackedScene" uid="uid://dqfi1a14jq1w5" path="res://safebox.tscn" id="7_eow3j"]
+[ext_resource type="PackedScene" uid="uid://bpy6bel3axr6b" path="res://poor_little_bird_run_by_a_puny_human.tscn" id="7_j5wjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsws6"]
+size = Vector2(108, 4)
+
+[node name="Game" type="Node2D" unique_id=364563206]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1008935505]
+repeat_size = Vector2(100, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 50
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1889773431]
+texture = ExtResource("1_80nbo")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=149867967]
+repeat_size = Vector2(100, 0)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=846106833]
+texture = ExtResource("2_e2o6t")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1669320655]
+zoom = Vector2(11, 11)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=603481253]
+position = Vector2(70, 0)
+script = ExtResource("4_fc0e3")
+
+[node name="Evolution" type="Node" parent="." unique_id=344184569]
+script = ExtResource("5_7jktm")
+
+[node name="population" type="Node" parent="." unique_id=1642595239]
+script = ExtResource("6_ryrav")
+
+[node name="safebox" parent="." unique_id=587847445 instance=ExtResource("7_eow3j")]
+position = Vector2(10, 26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="safebox" unique_id=1279033467]
+position = Vector2(-10, 8)
+shape = SubResource("RectangleShape2D_tsws6")
+
+[node name="safebox2" parent="." unique_id=166703784 instance=ExtResource("7_eow3j")]
+position = Vector2(9, -94)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="safebox2" unique_id=690506173]
+position = Vector2(-10, 60)
+shape = SubResource("RectangleShape2D_tsws6")
+
+[node name="poor little bird run by a puny human" parent="." unique_id=661195340 instance=ExtResource("7_j5wjh")]
+
+[connection signal="body_entered" from="safebox" to="safebox" method="_on_body_entered"]
+[connection signal="body_entered" from="safebox2" to="safebox2" method="_on_body_entered"]

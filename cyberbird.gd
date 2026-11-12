@@ -20,11 +20,12 @@ func die():
 	if not alive:
 		return
 	alive = false
-	fitness = lifetime
+	fitness += lifetime
 	velocity = Vector2.ZERO
 	set_physics_process(false)
 	evolution.bird_died(self)
 	$Sprite2D.visible = false
+
 
 func decide():
 	var next_pipe_set: Node2D
@@ -38,12 +39,11 @@ func decide():
 
 	if next_pipe_set == null:
 		return
-
+	
 	var inputs = [
 		(next_pipe_set.global_position.x - global_position.x) / 200.0,
-		global_position.y / 50.0,
-		next_pipe_set.global_position.y / 50.0,
-		velocity.y / 100.0,
+		(global_position.y - next_pipe_set.global_position.y) / 50.0,
+		(velocity.y) / 100.0,
 	]
 	if braindead:
 		return

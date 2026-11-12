@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b7uga3u32b0jx"]
+
+[ext_resource type="FontFile" uid="uid://coqs0hxry4dcw" path="res://Ithaca-LVB75.ttf" id="1_cmhrf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tsws6"]
+font = ExtResource("1_cmhrf")
+font_size = 128
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2nv2"]
+font = ExtResource("1_cmhrf")
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+outline_color = Color(0, 1, 0.8, 1)
+
+[node name="Mainmenu" type="Control" unique_id=1664906309]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1041062473]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(1, 0.74853003, 0.5061699, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2091842016]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 20.0
+offset_right = 1051.0
+offset_bottom = 132.0
+text = "Flaippy Cyberbird yay"
+label_settings = SubResource("LabelSettings_tsws6")
+
+[node name="Label2" type="Label" parent="." unique_id=845185891]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 185.0
+offset_right = 1026.0
+offset_bottom = 418.0
+text = "Welcome!!! So the rules are simple:
+1. You (puny human) will run 
+cyberbird training until it auto save and 
+quits.
+2. Compete against them! Goodluck"
+label_settings = SubResource("LabelSettings_d2nv2")
+
+[node name="Button" type="Button" parent="." unique_id=1098425266]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button2" type="Button" parent="." unique_id=1156749347]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
